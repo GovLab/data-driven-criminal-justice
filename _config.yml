@@ -18,7 +18,7 @@ email:
 description: > # this means to ignore newlines until "baseurl:"
   
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://ccmdesign.github.io/cmd-website-v3" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username:  
 
@@ -36,7 +36,7 @@ source: ./source
 # sass_dir: source/css
 
 page_gen:
-  - data: 'portfolio'
-    template: 'project-template'
-    name: 'title'
+  - data: 'surveys'
+    template: 'survey'
+    name: 'url'
     dir: '/'

@@ -1,90 +1,73 @@
 ---
 layout: default
-title: CCM Design Inc.
+title: Data Driven Criminal Justice
+tagline: Surveys of the availability of and demand for data and data sharing among administrative agencies and between researchers and public institutions.
 ---
 
-{% include master-header.html class="js-master-header--homepage" %}
-
-<main role="main" class=""> <!-- main content starts here -->
-  <div class="wrapper">
-    <h1 class="main-logo"><img src="{{ '/images/logo-ccm-design-full.svg' | relative_url }}" alt=""></h1>
-  </div>
-
-  <div class="wrapper">
-    <table class="grid">
-      <tbody>
-        <tr>
-          <td class="grid__item branding" colspan="2">
-            <div class="company-description">
-              <p>CCM Design is a creative studio specialized in the digital design for the public good. Working with the big players in Open Government and Open Data, we build state of the brands and digital platforms. We are focused on branding, editorial design, and interfaces. Keeping the user at the center of design, UX is the driving force of our digital efforts.</p>
-            </div>
-          </td>
-          {% include highlight-card.html item="Open Data Impact" %}
-          {% include highlight-card.html item="IODC 2016 Report" %}
-        </tr>
-        <tr>
-          {% include highlight-card.html item="Data Collaboratives" %}          
-          {% include highlight-card.html item="Open Data 500 Logo" %}
-          {% include highlight-card.html item="OD4D Annual Report" %}
-        </tr>
-        <tr>
-          {% include highlight-card.html item="Data Analytics for Procurement" %}
-        </tr>
-        <tr>
-          {% include highlight-card.html item="Seed of Change" %}
-          {% include highlight-card.html item="Open Contracting" %}
-          {% include highlight-card.html item="Resilient Cities Report" %}
-          {% include highlight-card.html item="OGRX" %}
-        </tr>
-        <tr>
-          {% include highlight-card.html item="IODC 2015 Report" %}
-          {% include highlight-card.html item="Collectivites Locales" %}          
-          {% include highlight-card.html item="Digital Engagement Logo" %}
-        </tr>
-        <tr>
-          {% include highlight-card.html item="Baskerville" %}          
-          {% include highlight-card.html item="Smarter Crowdsourcing - Zika" %}
-          {% include highlight-card.html item="Digital Engagement Book" %}
-        </tr>
-        <tr>
-          {% include highlight-card.html item="Network of Innovators Logo" %}
-          {% include highlight-card.html item="ICT4Gov Logo" %}
-          {% include highlight-card.html item="Open Data Standards Report" %}
-        </tr>
-        <tr>
-          {% include highlight-card.html item="Karnataka Dashboard" %}
-          {% include highlight-card.html item="Open Data Catalogs Report" %}
-          {% include highlight-card.html item="Network of Innovators Interface" %}
-        </tr>
-        <tr>
-          {% include highlight-card.html item="Rio Grande do Norte Mockup" %}
-          {% include highlight-card.html item="Collective Intelligence" %}
-        </tr>
-        <tr>
-          {% include highlight-card.html item="Data Justice Network Logo" %}
-          {% include highlight-card.html item="Data Justice Network Logo" %}
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  
-
+<main role="main" class="homepage"> <!-- main content starts here -->
+  <header class="top-section top-section--main-color">
+    <div class="row align-center">
+      <hgroup class="large-10 column">
+        <h1>{{page.title}}</h1>
+        <h3>{{page.tagline}}</h3>  
+      </hgroup>
+    </div>
     
-  
+  </header>
 
-  <!-- <div class="wrapper">
-
-    <section class="portfolio-gallery">
-      {% for i in site.data.portfolio %}
-      <div class="portfolio-item {% for j in i.tags %}tag-{{j}} {% endfor %}">
-        <img class="portfolio-item__image" src="/images/{{i.client_name | slugify}}/{{i.main_image}}">
+  <section class="page-section">
+    <div class="row align-center">
+      <div class="large-10 column">
+        <p>The GovLab is leading a project, funded by the John and Laura Arnold Foundation, and in close collaboration with the Office of the U.S. Chief Data Scientist at the White House, to analyze and document how data flows through the criminal justice system. The aim is to identify policy, legal, and cultural barriers to effective data sharing among and use by agencies and between agencies and researchers.</p>
+        <p>As part of this work, the GovLab together with partners like the Justice Management Institute, are conducting a series of ongoing surveys: 1) Aimed at criminal justice practitioners working in administrative agencies and designed to assess how practitioners use data today to uncover new opportunities for using data tomorrow; 2) Designed to assess public officials’ capacity for using data in order to determine the need for greater skill-building and training; 3) Targeted at empirical criminal justice researchers to learn whether and if they have access to the data needed to develop reforms and innovations.</p>
       </div>
-      {% endfor %}
-    </section>
-  
-  </div> -->
-  
+    </div>
+  </section>
 
+  <section class="divider">
+    <h4>Why These Surveys?</h4>
+  </section>
+
+  <section class="slider">
+    <div class="slide">
+      <div class="row align-center">
+        <div class="column large-8">
+          <p><strong>Imagine</strong> if we had data from one individual from the point of arrest to post-release across agencies: We could have a better understanding of who is cycling through multiple systems and predict who is likely to turn into a super-utilizer.</p>    
+        </div>
+      </div>
+      
+    </div>
+    <div class="slide">
+      <div class="column large-8">
+        <p><strong>Imagine</strong> if we had data that could be responsibly shared among health and criminal justice agencies to ensure that those with mental health disorders could get treatment instead of jail time.</p>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="column large-8">
+        <p><strong>Imagine</strong> if a leading academic data scientist had access to aggregated and anonymous data across multiple jurisdictions, we could have a better understanding of who is convicted of what and when and better predict recidivism.</p>
+      </div>
+    </div>
+  </section>
+  
+  {% for survey in site.data.surveys %}
+    <div class="page-section page-section-{{survey.abbreviation}}">
+      <div class="row align-center">
+        <div class="large-5 columns">
+          <h2>{{survey.title}}</h2>
+          {% if survey.is_active %}
+            <p class="status">In Process</p>
+          {% else %}
+            <p class="status">Number of Responses: {{survey.qty_responses}}</p>
+          {% endif %}
+          <i class="material-icons xl-badge" id="badge-1">{{survey.material_icon}}</i>
+        </div>
+        <div class="large-5 columns">
+          <p>{{survey.description}}</p>
+          <a class="button button-naked" href="{{survey.url}}.html">Find out more<i class="material-icons">arrow_forward</i></a>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
   
 </main>
 

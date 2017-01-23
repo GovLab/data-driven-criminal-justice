@@ -38,11 +38,11 @@
     text-decoration: none;
     cursor: pointer;
     border: 0;
-    color: rgba($white, .8);
+    color: rgba(white, .8);
     transition: all 0.3s ease;
 
     &:hover { 
-        color: $white;
+        color: white;
         transition: all 0.3s ease;
     }
 }

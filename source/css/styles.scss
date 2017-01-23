@@ -9,23 +9,11 @@ $medium-up: 40.063em;
 $large: 64.063em;
 
 // Colors
-$white: rgba(255,255,255,1);
-$black: rgba(0,0,0,1);
-$green: #00bec0;
-$pink: #db0e6b;
-
-$main-color: $green;
+// $main-color: ;
 
 
 @import 'breakpoint';
 @import 'utils';
 @import 'base';
-@import 'grid';
-@import 'card';
-@import 'header';
-@import 'post';
-@import 'project';
-@import 'homepage';
-@import 'portfolio';
 
 
