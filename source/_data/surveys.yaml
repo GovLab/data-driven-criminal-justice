@@ -1,0 +1,64 @@
+---
+# surveys
+
+- title: Data Driven Criminal Justice Training
+  url: data-driven-criminal-justice-training
+  image: ddcj-1.jpg
+  date_start: September 9, 2015
+  date_end: October 21, 2015
+  qty_responses: 57
+  abbreviation: criminal-justice 
+  description: "Aimed at members of criminal justice agencies (including law enforcement, courts, corrections and policy makers) nationwide and designed to identify the data needs of and capacity gaps in the community. Goal: Spot challenges in the ability to use data and develop ways to overcome them."
+  objectives:
+    - Identify the projects and problems people are working on where data might help.
+    - Know how much practitioners know about data science and innovation.
+    - Inform the design of training programs to accelerate data-driven criminal justice reform.
+  key_findings: The initial responses showed disparate conceptual and practical skill level of criminal justice officials regarding the use of data. Designed to identify the barriers and limitations to data sharing and analysis, the survey revealed a deficit in the ability to use data that varies greatly across agencies.
+  is_active: false
+  link:
+    survey: https://the-govlab.forms.fm/data-driven-criminal-justice-training-survey
+  downloads:
+    findings: ddcj-training.pdf
+  material_icon: assignment
+
+- title: CJCC Data Use Survey
+  url: cjcc-data-use-survey
+  image: ddcj-2.jpg
+  date_start: October 21, 2015
+  date_end: October 24, 2015
+  qty_responses: 34
+  abbreviation: new-paradigm
+  description: "Aimed at members of Criminal Justice Coordinating Councils (CJCCs) and NGOS and designed to identify how jurisdictions collect, use, store and share data today. The Goal: Accelerate greater use of data by public agencies to lower incarceration and crime."
+  objectives:
+    - Understand the role of data-driven decision making in the criminal justice system today
+    - Map the availability of and access to data for reform
+    - Identify the barriers and impediments to using data
+  key_findings: Initial results from demonstrated a diverse array of data practices. Information is collected on paper and digitally. In some cases, it is anonymized and, in other cases, simply stored security. There’s a significant diversity around data analytics as well. Some analyze the data within the agency, some outsource, and some do not perform data analytics at all. Some jurisdictions can use data to trace someone in the system; others cannot. Governance policies and mechanisms differ. In short, there is diversity of experience. In common is only the fact that almost no one posts open data for the public, including researchers, to study and analyze.
+  initial_results: Presented during the first Data-Driven Justice Workshop held at the White House on October 28th, 2015.
+  is_active: false
+  link:
+    survey: https://govlab.typeform.com/to/qPeday
+  downloads:
+    findings: ddcj-toward-a-new-paradigm.pdf
+  material_icon: lightbulb_outline
+
+- title: Empirical Criminal Justice Research
+  url: empirical-criminal-justice-research
+  subtitle: Enabling Greater Collaboration Between Government and the Research Community
+  image: ddcj-3.jpg
+  date_start: 
+  date_end:
+  qty_responses: In Process
+  abbreviation: empirical-criminal-justice
+  description: "Targeted at empirical criminal justice researchers from across the country to identify and assess their sources of data and how hard or easy they are to access. Goal: Increase responsible data sharing between researchers and government to drive innovation."
+  objectives:
+    - How empirical criminal justice researchers use criminal justice data
+    - How empirical criminal justice researchers access data
+    - Impediments to accessing data
+    - How researchers would like to obtain data
+  key_findings: 
+  is_active: true
+  link:
+    survey: https://nyu.qualtrics.com/jfe/form/SV_4MCNBPkJ7KVR3cp
+  downloads:
+  material_icon: assessment

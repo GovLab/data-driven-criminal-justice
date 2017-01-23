@@ -1,0 +1,138 @@
+---
+layout: default
+title: 
+
+---
+
+<main class='surveys-page'>
+  <header class="top-section top-section--main-color">
+    <div class="row align-center">
+      <hgroup class="large-10 column">
+        <h1>{{page.title}}</h1>
+        <h3>{{page.tagline}}</h3>  
+      </hgroup>
+    </div>
+    <div class="button-float">
+      {% if page.is_active %}
+        <a href="#" class="b-button m-{{abbreviation}} js-open-modal">Take the Survey<i class="material-icons">arrow_forward</i></a>
+      {% else %}
+        <a href="./files/{{downloads.findings}}" target="_blank" class="b-button m-{{abbreviation}}">Download Findings<i class="material-icons m-space">file_download</i></a>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="page-section survey-summary">
+    <div class="row">
+      <div class="large-3 columns">
+        <h3 class="e-description-title">Description</h3>
+      </div>
+      <div class="large-8 columns end">
+        <p class="e-description">{{page.description}}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-3 columns">
+        <h3 class="e-description-title">Objectives</h3>
+      </div>
+      <div class="large-8 columns end">
+        <ul class='e-description'>
+          {% for objective in page.objectives %}
+          <li>{{objective}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-3 columns">
+        <h3 class="e-description-title">Dates</h3>
+      </div>
+      <div class="large-8 columns end">
+        {% if page.is_active %}
+          <p class="e-description">In Process</p>
+        {% else %}
+          <p class="e-description">{{page.date_start}} - {{page.date_end}}</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-3 columns">
+        <h3 class="e-description-title">Number of Responses</h3>
+      </div>
+      <div class="large-8 columns end">
+        {% if page.is_active %}
+          <p class="e-description">In Process</p>
+        {% else %}
+        <p class="e-description">{{page.qty_responses}}</p>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if page.initial_results %}
+      <div class="row">
+        <div class="large-3 columns">
+          <h3 class="e-description-title">Initial Results</h3>
+        </div>
+        <div class="large-8 columns end">
+          <p class="e-description">{{page.initial_results}}</p>
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="row">
+      <div class="large-3 columns">
+        <h3 class="e-description-title">Key Findings</h3>
+      </div>
+      <div class="large-8 columns end">
+        {% if page.is_active %}
+          <p class="e-description">Forthcoming</p>
+        {% else %}
+        <p class="e-description">{{page.key_findings}}</p>
+        {% endif %}
+      </div>
+    </div>
+    
+  </div>
+
+<div class="b-divider m-{{abbreviation}} m-next">
+
+  <div class="row"> 
+    <div class="large-6 large-offset-6 columns">
+      <h1>See the Survey</h1>
+      {% if page.is_active %}
+      <a href="#" class="js-open-modal">
+        <h2>{{page.title}}<i class="material-icons">chevron_right</i></h2>
+      </a>
+      {% else %}
+      <a href="{{page.link.survey}}" target="_blank">
+        <h2>{{page.title}}<i class="material-icons">chevron_right</i></h2>
+      </a>
+      {% endif %}
+      </div>
+  </div>
+</div>
+</main>
+
+<!-- modal window -->
+<!-- <div class="b-modal">
+  <div class="e-content m-purple" style="color:black;">
+    <h2>Request an Invite</h2>
+    <form action="//formspree.io/info@thegovlab.org" method="POST" class="b-form">
+      <div class="row">
+        <div class="large-12 large-centered columns">
+          <input type="text" id="first-name" placeholder="First Name" name="first-name"/>
+          <input type="text" id="last-name" placeholder="Last Name" name="last-name"/>
+          <input type="email" id="mail" placeholder="Email" name="email" required/>
+          <input type="text" id="title" placeholder="Title" name="title" required/>
+          <input type="text" id="affiliation" placeholder="Affiliation" name="affiliation" required/>
+          <input type="hidden" name="_next" value="//govlab.github.io/data-driven-criminal-justice/confirmation.html" />
+          <input type="text" name="_gotcha" style="display:none" />
+          <input type="submit" value="Send">
+          <a id="close-modal" class="b-button js-close-modal" href="#">Close</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</div> -->

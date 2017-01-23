@@ -1,0 +1,126 @@
+{% extends '_base.html' %}
+
+{% block menu %}
+<nav class="b-main-menu">
+    <a href="./">Home</a>
+    {% for survey in $global.surveys %}
+        <a href="{{survey.id}}-{{survey.title | slug }}.html">{{survey.title}}</a>
+    {% endfor %}
+</nav>
+{% endblock %}
+
+
+{% block main %}
+<div class='b-surveys-page'>
+
+
+<div class="b-top-section" style='background-image: url(./img/banners/{{image}})'>
+  <div class="row expanded">
+      <div class="e-shade"></div>
+      <hgroup class="e-titles">
+          <h1 class="e-main-title">{{title}}</h1>
+      </hgroup>
+      <div id="download-button">
+        {% if not is_active %}
+            <a href="./files/{{downloads.findings}}" target="_blank" class="b-button m-{{abbreviation}}">Download Findings<i class="material-icons m-space">file_download</i></a>
+          {% else %}
+            <a href="{{link.survey}}" target="_blank" class="b-button m-{{abbreviation}}">Take the Survey<i class="material-icons">arrow_forward</i></a>
+        {% endif %}
+      </div>
+  </div>
+</div>
+
+  <div class="b-page-section survey-summary">
+
+    <div class="row">
+      <div class="large-3 columns">
+        <h3 class="e-description-title">Description</h3>
+      </div>
+      <div class="large-8 columns end">
+        <p class="e-description">{{description}}</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-3 columns">
+        <h3 class="e-description-title">Objectives</h3>
+      </div>
+      <div class="large-8 columns end">
+        <ul class='e-description'>
+          {% for objective in objectives %}
+          <li>{{objective}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    {% if initial_results %}
+      <div class="row">
+        <div class="large-3 columns">
+          <h3 class="e-description-title">Initial Results</h3>
+        </div>
+        <div class="large-8 columns end">
+          <p class="e-description">{{initial_results}}</p>
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="row">
+      <div class="large-3 columns">
+        <h3 class="e-description-title">Key Findings</h3>
+      </div>
+      <div class="large-8 columns end">
+        {% if is_active %}
+          <p class="e-description">Forthcoming</p>
+        {% else %}
+        <p class="e-description">{{key_findings}}</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-3 columns">
+        <h3 class="e-description-title">First Conducted: </h3>
+      </div>
+      <div class="large-8 columns end">
+        {% if is_active %}
+          <p class="e-description">In Process</p>
+        {% else %}
+          <p class="e-description">{{date_start}} - {{date_end}}</p>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="large-3 columns">
+        <h3 class="e-description-title">Number of Responses</h3>
+      </div>
+      <div class="large-8 columns end">
+        {% if is_active %}
+          <p class="e-description">In Process</p>
+        {% else %}
+        <p class="e-description">{{qty_responses}}</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+<div class="b-divider m-{{abbreviation}} m-next">
+
+  <div class="row"> 
+    <div class="large-6 large-offset-6 columns">
+      <h1>See the Survey</h1>
+      <a href="{{link.survey}}" target="_blank">
+        <h2>{{title}}<i class="material-icons">chevron_right</i></h2>
+      </a>
+      </div>
+  </div>
+</div>
+
+
+
+
+
+</div>
+{% endblock %}
+
