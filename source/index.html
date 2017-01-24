@@ -5,69 +5,57 @@ tagline: Surveys of the availability of and demand for data and data sharing amo
 ---
 
 <main role="main" class="homepage"> <!-- main content starts here -->
-  <header class="top-section top-section--main-color">
+  <header class="top-section top-section--accent-color">
     <div class="row align-center">
-      <hgroup class="large-10 column">
+      <hgroup class="large-5 column top-section__left-panel">
         <h1>{{page.title}}</h1>
         <h3>{{page.tagline}}</h3>  
       </hgroup>
-    </div>
-    
-  </header>
-
-  <section class="page-section">
-    <div class="row align-center">
-      <div class="large-10 column">
+      <div class="large-6 large-offset-1 column top-section__right-panel">
         <p>The GovLab is leading a project, funded by the John and Laura Arnold Foundation, and in close collaboration with the Office of the U.S. Chief Data Scientist at the White House, to analyze and document how data flows through the criminal justice system. The aim is to identify policy, legal, and cultural barriers to effective data sharing among and use by agencies and between agencies and researchers.</p>
         <p>As part of this work, the GovLab together with partners like the Justice Management Institute, are conducting a series of ongoing surveys: 1) Aimed at criminal justice practitioners working in administrative agencies and designed to assess how practitioners use data today to uncover new opportunities for using data tomorrow; 2) Designed to assess public officials’ capacity for using data in order to determine the need for greater skill-building and training; 3) Targeted at empirical criminal justice researchers to learn whether and if they have access to the data needed to develop reforms and innovations.</p>
       </div>
     </div>
-  </section>
+    
+  </header>
 
-  <section class="divider">
+  <section class="divider centered divider--main-color">
     <h4>Why These Surveys?</h4>
   </section>
 
-  <section class="slider">
-    <div class="slide">
-      <div class="row align-center">
-        <div class="column large-8">
-          <p><strong>Imagine</strong> if we had data from one individual from the point of arrest to post-release across agencies: We could have a better understanding of who is cycling through multiple systems and predict who is likely to turn into a super-utilizer.</p>    
-        </div>
-      </div>
-      
-    </div>
-    <div class="slide">
-      <div class="column large-8">
-        <p><strong>Imagine</strong> if we had data that could be responsibly shared among health and criminal justice agencies to ensure that those with mental health disorders could get treatment instead of jail time.</p>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="column large-8">
-        <p><strong>Imagine</strong> if a leading academic data scientist had access to aggregated and anonymous data across multiple jurisdictions, we could have a better understanding of who is convicted of what and when and better predict recidivism.</p>
+  <section class="slider-fade-wrapper slider-fade-wrapper--main-color">
+    <div class="row align-center">
+      <div class="column large-9">
+        <div class="slider-fade centered">
+          <p><strong>Imagine</strong> if we had data from one individual from the point of arrest to post-release across agencies: We could have a better understanding of who is cycling through multiple systems and predict who is likely to turn into a super-utilizer.</p>
+          <p><strong>Imagine</strong> if we had data that could be responsibly shared among health and criminal justice agencies to ensure that those with mental health disorders could get treatment instead of jail time.</p>
+          <p><strong>Imagine</strong> if a leading academic data scientist had access to aggregated and anonymous data across multiple jurisdictions, we could have a better understanding of who is convicted of what and when and better predict recidivism.</p>
+        </div>  
       </div>
     </div>
   </section>
-  
-  {% for survey in site.data.surveys %}
-    <div class="page-section page-section-{{survey.abbreviation}}">
-      <div class="row align-center">
-        <div class="large-5 columns">
-          <h2>{{survey.title}}</h2>
-          {% if survey.is_active %}
-            <p class="status">In Process</p>
-          {% else %}
-            <p class="status">Number of Responses: {{survey.qty_responses}}</p>
-          {% endif %}
-          <i class="material-icons xl-badge" id="badge-1">{{survey.material_icon}}</i>
-        </div>
-        <div class="large-5 columns">
-          <p>{{survey.description}}</p>
-          <a class="button button-naked" href="{{survey.url}}.html">Find out more<i class="material-icons">arrow_forward</i></a>
-        </div>
+  <div class="row align-center expanded collapse">
+    {% for survey in site.data.surveys %}
+    <div class="large-4 column survey-card survey-active--{{survey.is_active}} survey-card--{{survey.abbreviation}} %}">
+      <header class="survey-card__status survey-card__content">
+        {% if survey.is_active %}In Process
+        {% else %}
+        <span>{{survey.qty_responses}}</span> Responses {% endif %}
+        <i class="material-icons survey-card__badge" id="badge-1">{{survey.material_icon}}</i>
+      </header>
+      <div class="survey-card__content">
+        <h2>{{survey.title}}</h2>
+        <p>{{survey.description}}</p>  
+        
+        {% if survey.is_active %}
+        <a class="button button--spaced button--full button--main-color" href="{{survey.url}}.html">Take Survey</a>
+        {% else %}
+        <a class="button button--spaced button--full button--outline" href="{{survey.url}}.html">See Results</a>
+        {% endif %}
+
       </div>
     </div>
-  {% endfor %}
-  
+    {% endfor %}
+  </div>
 </main>
 

@@ -8,13 +8,25 @@ $touch: (max-width 64em);
 $medium-up: 40.063em;
 $large: 64.063em;
 
+$dark-blue: #151F2B;
+$yellow: #E3C729;
+
+$main-color: $yellow;
+$accent-color: $dark-blue;
+
 // Colors
 // $main-color: ;
 
 
 @import 'breakpoint';
 @import 'utils';
+@import 'styleguide-patch';
 @import 'base';
 @import 'footer';
+@import 'survey-card';
+@import 'homepage';
+@import 'survey-page';
+
+
 
 

@@ -1,9 +1,10 @@
 .footer {
-  &__partner-logo {
-
-    > a {
-    }
+  &__partner-logo img { max-height: 110px; }
+  
+  &--nyu,
+  &--mit {
+    display: inline-block;
+    img { max-height: 80px; }
   }
-
 
 }

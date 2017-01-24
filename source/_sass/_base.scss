@@ -2,3 +2,35 @@
   box-sizing: border-box;
 }
 
+.top-section {
+  &__left-panel {
+    text-align: right;
+
+    h1 {
+      font-size: 2.8rem;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      text-transform: none;
+      line-height: 1.4;
+    }
+  }
+
+  &__right-panel {
+    text-align: left;
+
+    > p:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+#close-modal {
+  float: right;
+  background-color: transparent;
+  &:hover {
+    background-color: rgba(black, .1);
+  }
+}

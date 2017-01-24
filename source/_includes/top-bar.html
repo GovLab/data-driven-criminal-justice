@@ -1,0 +1,19 @@
+<header class="top-bar top-bar--transparent">
+    <span class="top-bar__button js-trigger-menu">menu</span>
+    <nav class="main-menu js-target-menu main-menu--left">
+      <a href="{{ '/' | relative_url }} ">Home</a>
+      {% for survey in site.data.surveys %}
+          <a href="{{survey.title | slugify }}.html">{{survey.title}}</a>
+      {% endfor %}
+    </nav>
+     <a class="top-bar__logo" href="/"><img src="/images/govlab-logo-white.png" alt="The GovLab"></a>
+
+
+
+
+    <!-- <span class="top-bar__button js-trigger-menu">more_vert</span>
+    <nav class="main-menu js-target-menu main-menu--right">
+      <a href="#">Github Repository</a>
+      <a href="./sandbox.html">Sandbox</a>
+    </nav> -->
+  </header>

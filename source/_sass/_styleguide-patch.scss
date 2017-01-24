@@ -1,0 +1,119 @@
+// Styleguide Styles
+
+.top-section {
+  padding-bottom: 5px;
+}
+
+.top-bar--transparent {
+  z-index: 100;
+  background-color: rgba(white, .1);
+  position: relative;
+}
+
+.top-bar--transparent ~ main { 
+  margin-top: -50px; 
+
+  > .top-section { padding-top: 120px; }
+}
+
+.main-menu { width: 360px; }
+
+.top-section,
+.divider,
+.slider-fade-wrapper {
+  &--accent-color { background-color: $accent-color; }
+  &--main-color { background-color: $main-color; }
+  &--main-color { color: $accent-color; }
+}
+
+.button--full { 
+  width: 100%; 
+  text-align: center;
+}
+
+.button--main-color { 
+  background-color: $main-color; 
+  color: $accent-color;
+
+  &:hover { background-color: darken($main-color, 6); }
+}
+
+.button--accent-color { 
+  background-color: $accent-color; 
+  color: rgba(white, .6);
+}
+
+.button--spaced {
+  margin-top: 20px;
+}
+
+.button--outline {
+  background-color: transparent;
+  border: 1px solid $accent-color; 
+  color: $accent-color;
+
+  &:hover {
+    background-color: $accent-color;
+    color: white;
+  }
+}
+
+.button--outline-dark {
+  background-color: transparent;
+  border: 1px solid rgba(black, .6);
+  color: rgba(black, .6);
+
+  &:hover {
+    background-color: rgba($main-color, .9);
+    color: darken($main-color, 20);
+  } 
+}
+
+// Move to styleguide
+.floating-button {
+  position: relative;
+  padding-top: 40px;
+  margin-top: 30px;
+
+
+  &__wrapper {
+    bottom: -30px;
+    width: 100%;
+    position: absolute;
+    text-align: center;
+  }
+}
+
+// Move to styleguide
+.button--floating {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+  padding-left: 40px;
+  padding-right: 40px;
+  font-weight: bold;
+
+}
+
+.button--black {
+  background-color: #333;
+
+  &:hover {
+    background-color: #666;
+  }
+}
+
+// Ths might cause issues with the search component. Need to look deeper into this
+.form {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="month"],
+  input[type="number"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"] { width: 100%; }
+}
+

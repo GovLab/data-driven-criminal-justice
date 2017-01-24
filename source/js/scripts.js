@@ -21,17 +21,23 @@ $(document).ready(function () {
     });
 
     // Modal Click Behavior
-    // $('.js-open-modal').click(function () {
-    //     $('.js-target-modal').addClass('js-active');
-    //     $('#overlay').addClass('js-active');
-    //     $('body').addClass('js-body-modal-active');
-    // });
+    $('.js-open-modal').click(function () {
+        $('.js-target-modal').addClass('js-active');
+        $('#overlay').addClass('js-active');
+        $('body').addClass('js-body-modal-active');
+    });
 
-    // $('.js-close-modal').click(function () {
-    //     $('.js-target-modal').removeClass('js-active');
-    //     $('#overlay').removeClass('js-active');
-    //     $('body').removeClass('js-body-modal-active');
-    // });
+    $('.js-close-modal').click(function () {
+        $('.js-target-modal').removeClass('js-active');
+        $('#overlay').removeClass('js-active');
+        $('body').removeClass('js-body-modal-active');
+    });
+
+    $('#overlay').click(function () {
+        $('.js-target-modal').removeClass('js-active');
+        $('#overlay').removeClass('js-active');
+        $('body').removeClass('js-body-modal-active');
+    });
 
     // Sticky Click Behavior
     $('.js-close-sticky').click(function () {
@@ -66,5 +72,18 @@ $(document).ready(function () {
                 }
             }
         ]
+    });
+
+    // Slider
+    $('.slider-fade').slick({
+        arrows: false,
+        draggable: false,
+        swipeToSlide: false,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        fade: true,
+        speed: 2000,
+        infinite: true,
+        cssEase: 'linear'
     });
 }); // doc.ready
