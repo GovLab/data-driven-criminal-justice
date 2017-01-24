@@ -17,7 +17,7 @@ title:
 
     <div class="row align-center">
       {% if page.is_active %}
-        <div class="large-5 column survey-active">
+        <div class="large-5 column survey-active small-12">
           <p>In Process</p>
         </div>
       {% else %}
@@ -26,7 +26,7 @@ title:
       </div>
       {% endif %}
       
-      <div class="large-5 column top-section__right-panel">
+      <div class="large-5 column top-section__right-panel small-12">
         <p>{{page.description}}</p>
       </div>
     </div>
@@ -43,7 +43,7 @@ title:
 
   <div class="page-section survey-description">
     <div class="row align-center">
-      <div class="large-6 columns">
+      <div class="large-6 columns small-12">
         <h3>Objectives</h3>
         <ul>
           {% for objective in page.objectives %}
@@ -57,7 +57,7 @@ title:
       </div>
 
       {% if page.is_active == false %}
-      <div class="large-6 column">
+      <div class="large-6 column small-12">
         <h3>Key Findings</h3>
         <p>{{page.key_findings}}</p>
       </div>

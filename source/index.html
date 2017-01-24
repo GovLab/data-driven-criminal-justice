@@ -7,11 +7,11 @@ tagline: Surveys of the availability of and demand for data and data sharing amo
 <main role="main" class="homepage"> <!-- main content starts here -->
   <header class="top-section top-section--accent-color">
     <div class="row align-center">
-      <hgroup class="large-5 column top-section__left-panel">
+      <hgroup class="large-5 column top-section__left-panel small-12">
         <h1>{{page.title}}</h1>
         <h3>{{page.tagline}}</h3>  
       </hgroup>
-      <div class="large-6 large-offset-1 column top-section__right-panel">
+      <div class="large-6 large-offset-1 column top-section__right-panel small-12">
         <p>The GovLab is leading a project, funded by the John and Laura Arnold Foundation, and in close collaboration with the Office of the U.S. Chief Data Scientist at the White House, to analyze and document how data flows through the criminal justice system. The aim is to identify policy, legal, and cultural barriers to effective data sharing among and use by agencies and between agencies and researchers.</p>
         <p>As part of this work, the GovLab together with partners like the Justice Management Institute, are conducting a series of ongoing surveys: 1) Aimed at criminal justice practitioners working in administrative agencies and designed to assess how practitioners use data today to uncover new opportunities for using data tomorrow; 2) Designed to assess public officials’ capacity for using data in order to determine the need for greater skill-building and training; 3) Targeted at empirical criminal justice researchers to learn whether and if they have access to the data needed to develop reforms and innovations.</p>
       </div>
@@ -25,7 +25,7 @@ tagline: Surveys of the availability of and demand for data and data sharing amo
 
   <section class="slider-fade-wrapper slider-fade-wrapper--main-color">
     <div class="row align-center">
-      <div class="column large-9">
+      <div class="column large-9 small-12">
         <div class="slider-fade centered">
           <p><strong>Imagine</strong> if we had data from one individual from the point of arrest to post-release across agencies: We could have a better understanding of who is cycling through multiple systems and predict who is likely to turn into a super-utilizer.</p>
           <p><strong>Imagine</strong> if we had data that could be responsibly shared among health and criminal justice agencies to ensure that those with mental health disorders could get treatment instead of jail time.</p>
@@ -36,7 +36,7 @@ tagline: Surveys of the availability of and demand for data and data sharing amo
   </section>
   <div class="row align-center expanded collapse">
     {% for survey in site.data.surveys %}
-    <div class="large-4 column survey-card survey-active--{{survey.is_active}} survey-card--{{survey.abbreviation}} %}">
+    <div class="large-4 small-12 column survey-card survey-active--{{survey.is_active}} survey-card--{{survey.abbreviation}} %}">
       <header class="survey-card__status survey-card__content">
         {% if survey.is_active %}In Process
         {% else %}
