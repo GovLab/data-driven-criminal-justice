@@ -3,3 +3,6 @@ _site
 .jekyll-metadata
 node_modules
 support
+
+
+exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor']
