@@ -5,4 +5,4 @@ node_modules
 support
 
 
-exclude: ['config.ru', 'Gemfile', 'Gemfile.lock', 'vendor']
+exclude: ['config.ru', 'vendor']
