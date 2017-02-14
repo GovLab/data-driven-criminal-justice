@@ -5,9 +5,9 @@
   url: empirical-criminal-justice-research
   subtitle: Enabling Greater Collaboration Between Government and the Research Community
   image: ddcj-3.jpg
-  date_start: 
-  date_end:
-  qty_responses: In Process
+  date_start: April 2016
+  date_end: August 2016
+  qty_responses: 38
   abbreviation: empirical-criminal-justice
   description: "Targeted at empirical criminal justice researchers from across the country to identify and assess their sources of data and how hard or easy they are to access. Goal: Increase responsible data sharing between researchers and government to drive innovation."
   objectives:
@@ -15,11 +15,13 @@
     - How empirical criminal justice researchers access data
     - Impediments to accessing data
     - How researchers would like to obtain data
-  key_findings: 
-  is_active: true
+  key_findings: >
+    <em>Forthcoming</em>
+  is_active: false
   link:
     survey: https://nyu.qualtrics.com/jfe/form/SV_4MCNBPkJ7KVR3cp
   downloads:
+    findings: ddcj-results.pdf
   material_icon: assessment
 
 - title: Data Driven Criminal Justice Training
