@@ -1,13 +1,25 @@
 .survey-card {
   padding-bottom: 30px;
 
-  &__content { padding: 10px 30px; }
+  &__content { 
+
+    padding: 10px 30px; 
+
+    p { @media only screen and (min-width: 1024px) { min-height: 200px; } }
+
+    &__buttons {
+
+
+    }
+
+  }
 
   background-color: rgba(black, .05);
   &:nth-child(even) { background-color: rgba(black, .1); }
 
   h2 { 
-    min-height: 80px; 
+    min-height: 80px;
+    @media only screen and (min-width: 1024px) { min-height: 125px; }
     font-size: 2rem;
     line-height: 1.3;
   }

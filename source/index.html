@@ -46,13 +46,13 @@ tagline: Surveys of the availability of and demand for data and data sharing amo
       <div class="survey-card__content">
         <h2>{{survey.title}}</h2>
         <p>{{survey.description}}</p>  
-        
-        {% if survey.is_active %}
-        <a class="button button--spaced button--full button--main-color" href="{{survey.url}}.html">Take Survey</a>
-        {% else %}
-        <a class="button button--spaced button--full button--outline" href="{{survey.url}}.html">See Results</a>
-        {% endif %}
-
+        <div class="survey-card__content__buttons">
+          {% if survey.is_active %}
+          <a class="button button--spaced button--full button--main-color" href="{{survey.url}}.html">Take Survey</a>
+          {% else %}
+          <a class="button button--spaced button--full button--outline" href="{{survey.url}}.html">See Results</a>
+          {% endif %}
+        </div>
       </div>
     </div>
     {% endfor %}
